@@ -7,13 +7,13 @@ const main = async () => {
   const posts = [
     {
       "title": "Blog Post 1",
-      "imgURL": "https://unsplash.com/photos/npxXWgQ33ZQ",
+      "imgURL": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80",
       "content": "Here is some upworthy blog content :)",
       "author": "Eddie!"
     },
     {
       "title": "Blog Post 2",
-      "imgURL": "https://unsplash.com/photos/npxXWgQ33ZQ",
+      "imgURL": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80",
       "content": "An improvement on the first blog",
       "author": "Allison"
     }
