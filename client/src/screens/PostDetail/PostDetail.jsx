@@ -27,7 +27,7 @@ function PostDetail() {
       <div className="post-detail">
         <img className="post-detail-image" src={post.imgURL} alt={post.name} />
          <div className="detail">
-          <div className="title">{post.titley}</div>
+          <div className="title">{post.title}</div>
           <div className="author">{post.author}</div>
           <div className="content">{post.content}</div>
           <div className="button-container">
