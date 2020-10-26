@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './CreatePost.css'
+import { Redirect } from 'react-router-dom';
 import Layout from '../../Components/shared/Layout/Layout'
 import { createPost } from '../../services/posts'
 
@@ -28,6 +29,10 @@ export default function CreatPost(props) {
     setCreated({ created })
   }
 
+  if (isCreated) {
+    return <Redirect to="/" />
+  }
+
 
   return (
     <Layout>
@@ -42,14 +47,14 @@ export default function CreatPost(props) {
           onChange={handleChange}
         />
         <input
-          className="input-image"
-          placeholder="Image Link"
-          value={post.imgURL}
-          name="imgURL"
+          className="input-author"
+          placeholder="Author"
+          value={post.author}
+          name="author"
           required
           onChange={handleChange}
         />
-        <input
+        <textarea
           className="input-content"
           placeholder="Post Body"
           value={post.content}
@@ -58,13 +63,14 @@ export default function CreatPost(props) {
           onChange={handleChange}
         />
         <input
-          className="input-author"
-          placeholder="Author"
-          value={post.author}
-          name="author"
+          className="input-image"
+          placeholder="Image Link"
+          value={post.imgURL}
+          name="imgURL"
           required
           onChange={handleChange}
         />
+
         <button type="submit" >submit</button>
       </form>
     </Layout>
