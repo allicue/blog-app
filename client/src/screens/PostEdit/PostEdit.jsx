@@ -1,8 +1,9 @@
-import React from "React"
-import {useParams, Redirect} from 'react-router-dom'
+import React from "react"
+import Layout from '../../Components/shared/Layout/Layout'
+import { useParams, Redirect } from 'react-router-dom'
 import './PostEdit.css'
 import { useEffect, useState } from 'react'
-import {getPost, updatePost} from '../../services/posts'
+import { getPost, updatePost } from '../../services/posts'
 
 
 const PostEdit = (props) => {
@@ -13,10 +14,10 @@ const PostEdit = (props) => {
     imgURL: '',
     content: '',
     author: ''
-  }) 
-  
+  })
+
   const [isUpdated, setUpdated] = useState(false)
-  let {id} = useParams()
+  let { id } = useParams()
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -42,7 +43,7 @@ const PostEdit = (props) => {
   }
 
   if (isUpdated) {
-    return <Redirect to={`/posts/${props.match.params.id}`}/>
+    return <Redirect to={`/posts/${props.match.params.id}`} />
   }
 
   return (
@@ -62,35 +63,35 @@ const PostEdit = (props) => {
           </form>
         </div>
         <form className="edit-form" onSubmit={handleSubmit}>
-            <input
-              className="input-name"
-              placeholder="Title"
-              value={post.title}
-              name='title'
-              required
-              onChange={handleChange}
-            />
-            <input
-              className="input-author"
-              placeholder="Author"
-              value={post.author}
-              name='author'
-              required
-              onChange={handleChange}
-            />
-            <textarea
-              className="textarea-content"
-              rows={10}
-              cols={78}
-              placeholder="Text Content Here"
-              value={post.content}
-              name='content'
-              required
-              onChange={handleChange}
+          <input
+            className="input-name"
+            placeholder="Title"
+            value={post.title}
+            name='title'
+            required
+            onChange={handleChange}
+          />
+          <input
+            className="input-author"
+            placeholder="Author"
+            value={post.author}
+            name='author'
+            required
+            onChange={handleChange}
+          />
+          <textarea
+            className="textarea-content"
+            rows={10}
+            cols={78}
+            placeholder="Text Content Here"
+            value={post.content}
+            name='content'
+            required
+            onChange={handleChange}
           />
           <button type="submit" className="save-button">Save</button>
-          </form>
-        </div>
+        </form>
+      </div>
     </Layout>
   )
 }
