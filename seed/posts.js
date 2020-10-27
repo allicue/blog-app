@@ -6,10 +6,20 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
 
-  const user1 = new User({ username: "allicue", email: "allicue@gmail.com", posts: [] })
+  const user1 = new User({
+      username: "allicue",
+      profilePic: "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png",
+      email: "allicue@gmail.com",
+      posts: []
+    })
   await user1.save()
 
-  const user2 = new User({ username: "nathan11", email: "nathan@gmail.com", posts: [] })
+  const user2 = new User({
+    username: "nathan11",
+    profilePic: "https://www.jennstrends.com/wp-content/uploads/2013/10/bad-profile-pic-2-768x768.jpeg",
+    email: "nathan@gmail.com",
+    posts: []
+  })
   await user2.save()
 
   const posts = [
