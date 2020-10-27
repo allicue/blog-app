@@ -80,7 +80,7 @@ export default function CreatPost(props) {
         <button type="submit" >submit</button>
       </form>
       <p>Image Preview:</p>
-      {imagePreview ? <img className="image-preview" src={imagePreview} /> : null}
+      {imagePreview ? <img className="image-preview" src={imagePreview} alt="preview" /> : null}
     </Layout>
   )
 }
