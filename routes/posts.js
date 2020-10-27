@@ -8,5 +8,7 @@ router.get('/posts/:id', controllers.getPost)
 router.post('/posts', controllers.createPost)
 router.put('/posts/:id', controllers.updatePost)
 router.delete('/posts/:id', controllers.deletePost)
+router.get('/users', controllers.getUsers)
+router.get('/users/:id', controllers.getUser)
 
 module.exports = router
