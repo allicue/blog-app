@@ -14,6 +14,7 @@ export default function CreatPost(props) {
     author: '',
   })
   const [isCreated, setCreated] = useState(false)
+  const [imagePreview, setImagePreview] = useState('')
 
   const handleChange = async (e) => {
     const { name, value } = e.target
@@ -31,6 +32,11 @@ export default function CreatPost(props) {
 
   if (isCreated) {
     return <Redirect to="/" />
+  }
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setImagePreview(post.imgURL)
   }
 
 
@@ -70,9 +76,11 @@ export default function CreatPost(props) {
           required
           onChange={handleChange}
         />
-
+        <button className="preview-button" onClick={handleClick}> preview image </button>
         <button type="submit" >submit</button>
       </form>
+      <p>Image Preview:</p>
+      {imagePreview ? <img className="image-preview" src={imagePreview} /> : null}
     </Layout>
   )
 }
