@@ -1,3 +1,4 @@
+import { response } from 'express'
 import api from './apiConfig'
 
 export const getPosts = async () => {
@@ -43,4 +44,22 @@ export const deletePost = async id => {
   } catch (error) {
       throw error
   }
+}
+
+export const getUsers = async () => {
+  try {
+    const response = await api.get('/users')
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const getUser = async id => {
+  try {
+    const response = await api.get(`/users/${id}`)
+    return response.data
+} catch (error) {
+    throw error
+}
 }
