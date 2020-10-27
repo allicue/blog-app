@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './CreatePost.css'
+import { Redirect } from 'react-router-dom';
 import Layout from '../../Components/shared/Layout/Layout'
 import { createPost } from '../../services/posts'
 
@@ -13,6 +14,7 @@ export default function CreatPost(props) {
     author: '',
   })
   const [isCreated, setCreated] = useState(false)
+  const [imagePreview, setImagePreview] = useState('')
 
   const handleChange = async (e) => {
     const { name, value } = e.target
@@ -26,6 +28,15 @@ export default function CreatPost(props) {
     e.preventDefault()
     const created = await createPost(post)
     setCreated({ created })
+  }
+
+  if (isCreated) {
+    return <Redirect to="/" />
+  }
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setImagePreview(post.imgURL)
   }
 
 
@@ -42,14 +53,14 @@ export default function CreatPost(props) {
           onChange={handleChange}
         />
         <input
-          className="input-image"
-          placeholder="Image Link"
-          value={post.imgURL}
-          name="imgURL"
+          className="input-author"
+          placeholder="Author"
+          value={post.author}
+          name="author"
           required
           onChange={handleChange}
         />
-        <input
+        <textarea
           className="input-content"
           placeholder="Post Body"
           value={post.content}
@@ -58,15 +69,18 @@ export default function CreatPost(props) {
           onChange={handleChange}
         />
         <input
-          className="input-author"
-          placeholder="Author"
-          value={post.author}
-          name="author"
+          className="input-image"
+          placeholder="Image Link"
+          value={post.imgURL}
+          name="imgURL"
           required
           onChange={handleChange}
         />
+        <button className="preview-button" onClick={handleClick}> preview image </button>
         <button type="submit" >submit</button>
       </form>
+      <p>Image Preview:</p>
+      {imagePreview ? <img className="image-preview" src={imagePreview} /> : null}
     </Layout>
   )
 }
