@@ -19,7 +19,7 @@ class PostCards extends Component {
   render() {
 
     const CARDS = this.state.posts.map((post, index) =>
-      <PostCard _id={post._id} name={post.name} imgURL={post.imgURL} key={index} />
+      <PostCard _id={post._id} title={post.title} imgURL={post.imgURL} key={index} />
     )
 
     return (

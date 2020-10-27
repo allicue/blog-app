@@ -1,0 +1,23 @@
+.post-cards {
+  width: 90vw;
+  padding: 50px;
+  margin: 50px;
+}
+
+.cards {
+  display: flex;
+  flex-flow: wrap;
+}
+
+
+
+@media (max-width: 500px) {
+  .post-cards {
+      width: 90vw;
+      padding: 20px;
+      margin: 0px;
+  }
+  .cards {
+      margin: 0 -20px;
+  }
+}

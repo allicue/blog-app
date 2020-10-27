@@ -6,7 +6,6 @@ function Home() {
   return (
     <Layout>
   <div className="home">
-        <h1>Home Page</h1>
         <PostCards/>
       </div>
     </Layout>
