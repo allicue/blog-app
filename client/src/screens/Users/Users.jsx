@@ -5,16 +5,16 @@ import Layout from '../../Components/shared/Layout/Layout';
 export default function Users() {
   const [users, setUsers] = useState([])
 
-  useEffect(() => {
-    const users = await getUsers()
-    setUsers({ users })
-  })
+  // useEffect(() => {
+  //   const users = await getUsers()
+  //   setUsers({ users })
+  // })
 
   return (
-    <Layout>
-      <div>
 
-      </div>
-    </Layout>
+    <div>
+      <h1>HI</h1>
+    </div>
+
   )
 }
