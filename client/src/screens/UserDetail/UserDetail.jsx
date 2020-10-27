@@ -5,10 +5,10 @@ export default function UserDetail() {
 
 
   return (
-    <Layout>
-      <div>
 
-      </div>
-    </Layout>
+    <div>
+
+    </div>
+
   )
 }
