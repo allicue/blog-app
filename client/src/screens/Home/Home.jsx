@@ -5,9 +5,11 @@ import PostCards from '../../Components/PostCards/PostCards'
 function Home() {
   return (
     <Layout>
+
   <div className="home">
         <PostCards/>
-      </div>
+     </div>
+      
     </Layout>
   )
 }
