@@ -50,7 +50,6 @@ const PostEdit = (props) => {
     <Layout>
       <div>
         <div>
-          <img />
           <form onSubmit={handleSubmit}>
             <input
               className="edit-image-link"
