@@ -1,18 +1,47 @@
 .edit-image-link{
-  border: 2px solid black;
+  border: 2px solid #AC3C61;
   margin-bottom: 10px;
 }
 
-.input-name{
-  border: 2px solid black;
+input {
+  border: 2px solid #AC3C61;
+  background-color: #EDC7B7;
 }
 
-.input-author{
-  border: 2px solid black;
-  margin-left: 5px;
-}
+
+
 
 .textarea-content{
-  border: 5px solid black;
+  border: 5px solid #AC3C61;
   margin-top: 10px;
 }
+
+textarea{
+  resize: none;
+  border: 2px solid #AC3C61;
+  background-color: #EDC7B7;
+}
+
+textarea::placeholder{
+  color: #AC3C61
+}
+
+input::placeholder {
+  color: #AC3C61;
+}
+
+.preview-button {
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  height: 40px;
+  width: 30%;
+  align-self: center;
+  margin-top: 40px;
+  color: #AC3B61;
+  background-color: #EDC7B7;
+  border: none;
+  box-shadow: 2px 2px 10px 2px #CECECE;
+  cursor: pointer;  
+}
+
