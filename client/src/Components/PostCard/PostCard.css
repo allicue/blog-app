@@ -16,12 +16,16 @@
 }
 
 a.card {
-  box-shadow: 0px 0px 3px 1px #CECECE;
+  box-shadow: 0px 0px 3px 1px #123C69;
   padding: 10px 10px 30px 10px ;
+  background-color: #EDC7B7;
 }
 
 .post-card-image {
   width: 300px;
+  height: 200px;
+  max-height: 200px;
+  max-width: 300px; 
 }
 
 .post-card a {
@@ -31,7 +35,11 @@ a.card {
 
 p.post-title {
   padding-top: 20px;
-  color: black;
+  color: #AC3B61;
+  font-family: 'Kalam', cursive;
+    text-align: center;
+    font-size: 29px;
+    font-weight: bold;
 }
 
 @media (max-width: 500px) {

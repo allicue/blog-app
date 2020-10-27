@@ -15,6 +15,7 @@ function App() {
         <Route exact path='/CreatePost' component={CreatePost} />
         <Route exact path='/posts/:id' component={PostDetail} />
         <Route path='/posts/:id/edit' component={PostEdit} />
+
       </Switch>
 
     </div>
