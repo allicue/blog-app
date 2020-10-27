@@ -3,6 +3,7 @@ import './PostDetail.css'
 import Layout from '../../Components/shared/Layout/Layout'
 import { getPost, deletePost } from '../../services/posts'
 import { useParams, Link } from 'react-router-dom'
+import { CircularProgress } from '@material-ui/core/'
 
 function PostDetail() {
   
@@ -20,7 +21,7 @@ function PostDetail() {
   }, [id])
 
   if (!isLoaded) {
-    return <h1>Loading...</h1>
+    return <CircularProgress style={{ width: '200px', margin: '50%', display: 'fixed'}}/>
   }
   return (
     <Layout>
@@ -28,7 +29,7 @@ function PostDetail() {
         <img className="post-detail-image" src={post.imgURL} alt={post.name} />
          <div className="detail">
           <div className="title">{post.title}</div>
-          <div className="author">{post.author}</div>
+          <div className="author">Author: {post.author}</div>
           <div className="content">{post.content}</div>
           <div className="button-container">
             <button className="edit-button"><Link className="edit-link" to={`/posts/${post._id}/edit`}>Edit</Link></button>
